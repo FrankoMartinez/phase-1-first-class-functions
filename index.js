@@ -1,7 +1,15 @@
 function receivesAFunction(spy) {
-    console.log(spy());
+    spy();
 }
 
 function returnsANamedFunction() {
-    return function()
+    return function named() {
+        console.log("Returning named function");
+    }
+}
+
+function returnsAnAnonymousFunction() {
+    return function() {
+        console.log("Return anonymous function")
+    }
 }
